@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.6.x" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js" data-semver="1.6.5"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <div>Book Store</div>
+    <book-add book="newBook" add="add(newBook)"></book-add>
+    <book-disp ng-repeat="book in books" book="book" delete="delete(book)"></book-disp>
+  </body>
+
+</html>
